@@ -26,6 +26,8 @@ git submodule update
 # Generate TOP Night Coder results
 find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && parse_commits.rb >> ../top_night_coder.txt" \;
 
+cat "top_night_coder.txt"
+
 # Clean stats
 find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && rm -Rf ./$VIDEO_OUTPUT_PATH" \;
 
