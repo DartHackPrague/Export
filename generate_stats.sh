@@ -24,15 +24,17 @@ find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m
 git submodule update
 
 # Generate TOP Night Coder results
-find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && ../parse_commits.rb >> ../top_night_coder.txt" \;
-
-cat "top_night_coder.txt"
+rm -f "top_night_coder.txt"
+find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}/$STATS_OUTPUT_PATH' && cat activity.html | grep '%' | ../../parse_commits.rb >> ../../top_night_coder.txt" \;
+#cat "top_night_coder.txt"
+./calculate.rb > "top_night_coder_results.txt"
+cat "top_night_coder_results.txt"
 
 # Clean stats
-#find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && rm -Rf ./$VIDEO_OUTPUT_PATH" \;
+find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && rm -Rf ./$VIDEO_OUTPUT_PATH" \;
 
 # Generate gource
-#find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && $GOURCE_SCRIPT_PATH $VIDEO_OUTPUT_PATH" \;
+find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && $GOURCE_SCRIPT_PATH $VIDEO_OUTPUT_PATH" \;
 
 # Add, Commit and Push generated stats
-#find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m 'Generated git repository visualization' && git pull origin master && git push origin master" \;
+find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m 'Generated git repository visualization' && git pull origin master && git push origin master" \;
