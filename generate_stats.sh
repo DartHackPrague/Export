@@ -24,7 +24,7 @@ find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m
 git submodule update
 
 # Generate TOP Night Coder results
-find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && parse_commits.rb >> ../top_night_coder.txt" \;
+find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && ../parse_commits.rb >> ../top_night_coder.txt" \;
 
 cat "top_night_coder.txt"
 
