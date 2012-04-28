@@ -29,10 +29,10 @@ find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && ../parse_commit
 cat "top_night_coder.txt"
 
 # Clean stats
-find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && rm -Rf ./$VIDEO_OUTPUT_PATH" \;
+#find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && rm -Rf ./$VIDEO_OUTPUT_PATH" \;
 
 # Generate gource
-find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && $GOURCE_SCRIPT_PATH $VIDEO_OUTPUT_PATH" \;
+#find . -type d -mindepth 1 -maxdepth 1 -exec bash -c "cd '{}' && $GOURCE_SCRIPT_PATH $VIDEO_OUTPUT_PATH" \;
 
 # Add, Commit and Push generated stats
-find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m 'Generated git repository visualization' && git pull origin master && git push origin master" \;
+#find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m 'Generated git repository visualization' && git pull origin master && git push origin master" \;
