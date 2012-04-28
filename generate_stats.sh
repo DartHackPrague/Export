@@ -2,8 +2,8 @@
 
 GITSTATS_SCRIPT_PATH="/Users/inza/Projects/Tools/gitstats/gitstats"
 GOURCE_SCRIPT_PATH="/Users/inza/Projects/Tools/scripts/run_gource.sh"
-STATS_OUTPUT_PATH="GADCPrague_stats"
-VIDEO_OUTPUT_PATH="GADCPrague_visualization"
+STATS_OUTPUT_PATH="DartHackPrague_stats"
+VIDEO_OUTPUT_PATH="DartHackPrague_visualization"
 
 # Update Submodules
 git submodule update
