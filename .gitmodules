@@ -1,0 +1,21 @@
+[submodule "jigsaw-puzzle"]
+	path = jigsaw-puzzle
+	url = git@github.com:DartHackPrague/jigsaw-puzzle.git
+[submodule "DartReader"]
+	path = DartReader
+	url = git@github.com:DartHackPrague/DartReader.git
+[submodule "ships"]
+	path = ships
+	url = git@github.com:DartHackPrague/ships.git
+[submodule "dart-pong"]
+	path = dart-pong
+	url = git@github.com:DartHackPrague/dart-pong.git
+[submodule "Dart-Hackathon"]
+	path = Dart-Hackathon
+	url = git@github.com:DavidVotrubec/Dart-Hackathon.git
+[submodule "dart-music"]
+	path = dart-music
+	url = git@github.com:DartHackPrague/dart-music.git
+[submodule "Dart-TODO"]
+	path = Dart-TODO
+	url = git@github.com:DartHackPrague/Dart-TODO.git
