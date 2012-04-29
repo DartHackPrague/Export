@@ -7,7 +7,7 @@ first_project = 'dart-music'
 
 ARGF.each_with_index do |line, idx|
 		pn = Pathname.new("#{Dir.pwd}.path").parent.basename
-		if idx == 0 and !pn.to_s.eql? ".git" 
+		if idx == 0 and !pn.to_s.eql? ".git" and !pn.to_s.eql? "videos" 
 			numbers = line.gsub('>', '> ').gsub( %r{</?[^>]+?>}, '' ).gsub('%', '').split(' ')
 			
 			i = 0
