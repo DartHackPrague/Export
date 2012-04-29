@@ -19,3 +19,6 @@
 [submodule "Dart-TODO"]
 	path = Dart-TODO
 	url = git@github.com:DartHackPrague/Dart-TODO.git
+[submodule "DartTwitterWall"]
+	path = DartTwitterWall
+	url = git@github.com:DartHackPrague/DartTwitterWall.git

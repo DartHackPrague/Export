@@ -43,5 +43,5 @@ find . -type d -maxdepth 1 -exec bash -c "cd '{}' && git add -A && git commit -m
 
 # Copy all videos to one folder
 mkdir -p videos
-rm -f videos/*
+rm -fR videos/*
 cp -f */$VIDEO_OUTPUT_PATH/*.mp4 "./videos/"
